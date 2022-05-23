@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+   function active(){
+     var searhBar= document.getElementById('searchBar');
+
+     if(searchBar.value == 'Search'){
+       searchBar.value=''
+       searchBar.placeholder='Search'
+     }
+   }
+
+{% block body %}
+
+  <form action= /products?q method="GET">
+    <input type= "text" id="searchBar" placeholder="Search", maxlength="25" autocomplete="off" onMouseDown="active()" /><input type="submit" id="searchBtn" value="GO!"/>
+    </form>>
+    
+{% endblock %}
